@@ -35,7 +35,6 @@ export default function Home() {
             'servicio_id, servicio_nombre, servicio_oficio, telefono, zona, descripcion, activo, verificado, created_at',
           )
           .eq('activo', true)
-          .eq('verificado', true)
 
         if (busqueda.trim()) {
           query = query.ilike('servicio_oficio', `%${busqueda.trim()}%`)
@@ -45,9 +44,11 @@ export default function Home() {
           query = query.ilike('zona', `%${zonaFiltro.trim()}%`)
         }
 
-        const { data, error } = await query.order('created_at', {
-          ascending: false,
-        })
+        const { data, error } = await query
+          .eq('verificado', true)
+          .order('created_at', {
+            ascending: false,
+          })
 
         if (!cancelado) {
           if (error) {

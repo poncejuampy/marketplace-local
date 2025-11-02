@@ -93,7 +93,7 @@ export default function Publicar() {
             ¡Publicado con Éxito!
           </h2>
           <p className="text-gray-600 text-lg mb-4">
-            Tu servicio está en revisión. Lo aprobaremos en menos de 24hs ✓
+            Tu servicio está en revisión. Lo aprobaremos en menos de 24hs ✅
           </p>
           <p className="text-gray-500">Redirigiendo al inicio...</p>
         </div>
