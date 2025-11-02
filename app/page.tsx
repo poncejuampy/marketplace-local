@@ -131,7 +131,7 @@ export default function Home() {
           <p className="text-lg md:text-xl mb-8 opacity-90 max-w-2xl mx-auto">
             Electricistas, plomeros, programadores y más.
             <br />
-            Contacto directo por WhatsApp. Sin intermediarios.
+            Contacto directo por WhatsApp. Sin intermediarios. Para consultas de precio o disponibilidad, contactá al profesional directamente.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
