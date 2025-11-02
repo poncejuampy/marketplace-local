@@ -92,7 +92,10 @@ export default function Publicar() {
           <h2 className="text-2xl font-bold text-gray-900 mb-2">
             ¡Publicado con Éxito!
           </h2>
-          <p className="text-gray-600">Tu servicio ya está visible. Redirigiendo...</p>
+          <p className="text-gray-600 text-lg mb-4">
+            Tu servicio está en revisión. Lo aprobaremos en menos de 24hs ✓
+          </p>
+          <p className="text-gray-500">Redirigiendo al inicio...</p>
         </div>
       </div>
     )

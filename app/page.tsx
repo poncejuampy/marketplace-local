@@ -32,9 +32,10 @@ export default function Home() {
         let query = supabase
           .from('servicio')
           .select(
-            'servicio_id, servicio_nombre, servicio_oficio, telefono, zona, descripcion, activo, created_at',
+            'servicio_id, servicio_nombre, servicio_oficio, telefono, zona, descripcion, activo, verificado, created_at',
           )
           .eq('activo', true)
+          .eq('verificado', true)
 
         if (busqueda.trim()) {
           query = query.ilike('servicio_oficio', `%${busqueda.trim()}%`)
@@ -77,7 +78,8 @@ export default function Home() {
     const obtenerOficios = async () => {
       const { data, error } = await supabase
         .from('servicio')
-        .select('servicio_oficio')
+        .select('servicio_oficio, verificado')
+        .eq('verificado', true)
 
       if (cancelado || error || !data) {
         if (error) {

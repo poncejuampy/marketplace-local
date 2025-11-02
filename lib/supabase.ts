@@ -8,6 +8,7 @@ export interface Servicio {
 	zona: string
 	descripcion: string | null
 	activo: boolean
+	verificado: boolean
 	created_at: string
 }
 
